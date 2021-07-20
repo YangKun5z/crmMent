@@ -5,10 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-      userInfo: {
-        realname: window.localStorage.getItem('userInfo') == null ? '' : JSON.parse(window.localStorage.getItem('userInfo')).realname,
-        userId:window.localStorage.getItem('userInfo') == null ? '' : JSON.parse(window.localStorage.getItem('userInfo')).userId,
-      }
+      userInfo: window.localStorage.getItem('userInfo') == null ? '' : JSON.parse(window.localStorage.getItem('userInfo'))
     },
     mutations: {
       login (state, userInfo) {
