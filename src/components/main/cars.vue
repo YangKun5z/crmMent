@@ -28,7 +28,7 @@
           id:1,
           date: '2016-05-02',
           name: '王小虎',
-          projectName: '平安保险',
+          projectName: '平安保险1',
           toBug:'需派驻场员工现场调试'
         }, {
           id:2,
