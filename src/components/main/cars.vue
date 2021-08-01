@@ -28,13 +28,13 @@
           id:1,
           date: '2016-05-02',
           name: '王小虎',
-          projectName: '平安保险1',
+          projectName: '平安保险',
           toBug:'需派驻场员工现场调试'
         }, {
           id:2,
           date: '2016-05-04',
           name: '王小虎',
-          projectName: '中国人寿',
+          projectName: '中国人寿2',
           toBug:'线上调整'
         }, {
           id:3,
