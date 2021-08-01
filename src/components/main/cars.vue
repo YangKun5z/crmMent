@@ -46,7 +46,7 @@
           id:4,
           date: '2016-05-03',
           name: '王小虎',
-          projectName: '太平洋保险',
+          projectName: '太平洋保险4',
           toBug:'版本迭代'
         }],
         columns: [{
