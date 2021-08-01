@@ -19,14 +19,15 @@
 </template>
 
 <script>
-
+  import {logins} from '../assets/js/api'
   export default {
     name: 'Login',
     data () {
       return {
         loginForm: {
           username: '',
-          password: ''
+          password: '',
+          id:'zmmdemo1'
         },
         responseResult: []
       }
@@ -34,22 +35,22 @@
     methods: {
       login () {
         // console.log(this.$store.state)
-        this.$axios
-          .post('/eapi/account/login', {
-            username: this.loginForm.username,
-            password: this.loginForm.password,
-            id:'zmmdemo1'
-          })
-          .then(successResponse => {
-              console.log(successResponse)
-            if (successResponse.data.code === 'ok') {
-              this.$store.commit('login', successResponse.data.data)
+        let data = {
+          username: this.loginForm.username,
+          password: this.loginForm.password,
+          id:'zmmdemo1'
+        }
+        logins(data).then(res => {
+           if (res.data.code === 'ok') {
+              console.log(res.data.data)
+              this.$store.commit('login', res.data.data)
               var path = this.$route.query.redirect
               this.$router.replace({path: path === '/' || path === undefined ? '/index' : path})
             }
-          })
-          .catch(failResponse => {
-          })
+        }).catch(err => {
+          console.log(err)
+        })
+
       }
     }
   }

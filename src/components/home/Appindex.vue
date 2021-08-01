@@ -13,7 +13,6 @@
 <script>
   import Header from '../common/header.vue'
   import Menu from '../common/menu.vue'
-  import M from '../common/menu.vue'
   export default {
     name: 'AppIndex',
     components:{
